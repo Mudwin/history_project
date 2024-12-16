@@ -1,0 +1,484 @@
+@font-face {
+  font-family: "Slovic";
+  src: url("../assets/fonts/Slovic_Demo-300.otf");
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Slovic";
+  src: url("../assets/fonts/Slovic_Demo-400.otf");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Slovic";
+  src: url("../assets/fonts/Slovic_Demo-500.otf");
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Slovic";
+  src: url("../assets/fonts/Slovic_Demo-700.otf");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Slovic";
+  src: url("../assets/fonts/Slovic_Demo-900.otf");
+  font-weight: 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ST-Nizhegorodsky";
+  src: url("../assets/fonts/ST-Nizhegorodsky.ttf");
+  font-weight: 400;
+  font-display: swap;
+}
+
+:root {
+  --black: #000000;
+  --white: #ffffff;
+}
+
+body {
+  background-color: var(--white);
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1187px;
+  padding-inline: 20px;
+}
+.header {
+  color: var(--white);
+  margin-bottom: 110px;
+}
+.header__info {
+  background-color: var(--black);
+  padding-block: 20px;
+  font-size: 18px;
+  font-family: "Slovic";
+}
+.header__info_container {
+  display: flex;
+}
+.header__info_logo {
+  width: 80px;
+  margin-right: 20px;
+}
+.header__info_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.header__info_heading {
+  margin-bottom: 10px;
+  font-weight: 900;
+}
+.header__info_text {
+  font-weight: 300;
+}
+.header__main {
+  background-image: url("../assets/images/main.png");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  padding-top: 10%;
+  padding-bottom: 20px;
+}
+.header__main_heading {
+  font-family: "Slovic";
+  color: var(--white);
+  text-shadow: 2px -3px 2px var(--black);
+  text-decoration: underline;
+  font-size: 90px;
+}
+#span1 {
+  display: block;
+  animation-name: header-load;
+  animation-duration: 0.8s;
+}
+#span2 {
+  display: block;
+  animation-name: header-load;
+  animation-duration: 1.2s;
+}
+#span3 {
+  display: block;
+  animation-name: header-load;
+  animation-duration: 1.3s;
+}
+#span4 {
+  display: block;
+  animation-name: header-load;
+  animation-duration: 1.4s;
+}
+.header__main_heading::first-letter {
+  font-size: 120px;
+}
+.about {
+  color: var(--black);
+  font-family: "Slovic";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.about__text {
+  font-size: 35px;
+  margin-bottom: 250px;
+}
+.about__text::first-letter {
+  font-size: 55px;
+}
+.about__heading {
+  font-size: 40px;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
+.about__heading .span1 {
+  font-size: 80px;
+  text-decoration: underline;
+  margin-right: 10px;
+}
+.about__heading .span2 span {
+  font-size: 48px;
+}
+.party {
+  color: var(--black);
+  font-family: "Slovic";
+  margin-bottom: 80px;
+}
+.party__content {
+  display: flex;
+  gap: 45px;
+  padding-bottom: 20px;
+}
+.party__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.party__heading {
+  font-size: 40px;
+  margin-bottom: 40px;
+  font-weight: 900;
+}
+.party__heading::first-letter {
+  font-size: 50px;
+}
+.party__text {
+  font-size: 25px;
+  margin-bottom: 40px;
+  font-weight: 300;
+}
+.party__text::first-letter {
+  font-size: 35px;
+}
+.party__programm {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.party__programm-item {
+  font-size: 20px;
+  display: flex;
+  font-weight: 700;
+  transition: all 0.3s ease 0s;
+  padding-block: 2px;
+}
+.party__programm-item::before {
+  content: "";
+  background: url("../assets/icons/party.svg");
+  background-size: cover;
+  background-position: center;
+  width: 25px;
+  margin-right: 10px;
+}
+.party__programm-item:hover {
+  transform: scale(1.05);
+}
+.party__image {
+  min-width: 400px;
+  max-width: 400px;
+}
+.party__image img:hover {
+  transform: scale(1.1);
+}
+.party__image img {
+  margin-bottom: 10px;
+  transition: all 0.3s ease 0s;
+  border-radius: 10px;
+}
+.party__image-text {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 300;
+}
+.tagline {
+  font-size: 35px;
+  margin-bottom: 150px;
+  font-family: "Slovic";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tagline__content {
+  text-align: center;
+  padding-inline: 200px;
+}
+.tagline__content::first-letter {
+  font-size: 55px;
+}
+.footer {
+  background-color: var(--black);
+  color: var(--white);
+  padding-block: 50px;
+}
+.footer__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer__info {
+  font-family: "ST-Nizhegorodsky";
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 50px;
+}
+.footer__info-image {
+  width: 80px;
+  margin-right: 20px;
+}
+.footer__info-text {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 300;
+}
+.footer__info-text span {
+  font-size: 36px;
+}
+.footer__contacts {
+  font-family: "Slovic";
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.footer__contacts-item {
+  display: flex;
+  gap: 30px;
+  align-items: baseline;
+}
+.footer__contacts-text {
+  font-weight: 700;
+  font-size: 25px;
+}
+.footer__contacts-link {
+  font-weight: 900;
+  font-size: 25px;
+}
+
+@media (max-width: 500px) {
+  .header {
+    margin-bottom: 110px;
+  }
+  .header__info {
+    font-size: 14px;
+  }
+  .header__info_logo {
+    margin-right: 10px;
+  }
+  .header__main {
+    background-image: url("../assets/images/main.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    padding-top: 100px;
+    padding-bottom: 20px;
+  }
+  .header__main_heading {
+    text-shadow: 1px 1px 8px var(--black);
+    text-decoration: none;
+    font-size: 30px;
+    text-align: center;
+    color: var(--white);
+  }
+  .header__main_heading::first-letter {
+    font-size: 90px;
+  }
+  .about {
+    margin-bottom: 100px;
+  }
+  .about__text {
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 150px;
+  }
+  .about__text::first-letter {
+    font-size: 45px;
+  }
+  .about__heading {
+    font-size: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .about__heading .span1 {
+    font-size: 53px;
+    text-decoration: underline;
+    margin-right: 10px;
+  }
+  .about__heading .span2 span {
+    font-size: 48px;
+  }
+  .party {
+    margin-bottom: 60px;
+  }
+  .party__content {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 25px;
+    padding-bottom: 20px;
+  }
+  .party__info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .party__heading {
+    font-size: 40px;
+    margin-bottom: 20px;
+    font-weight: 900;
+    align-self: center;
+    text-align: center;
+  }
+  .party__heading::first-letter {
+    font-size: 50px;
+  }
+  .party__text {
+    text-align: center;
+  }
+  .party__programm {
+    gap: 30px;
+  }
+  .party__programm-item {
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    font-weight: 700;
+    text-align: justify;
+  }
+  .party__programm-item::before {
+    content: "";
+    background: url("../assets/icons/party.svg");
+    background-size: cover;
+    background-position: center;
+    min-width: 30px;
+    max-height: 30px;
+    margin-right: 15px;
+  }
+  .party__image {
+    min-width: 300px;
+    max-width: 300px;
+  }
+  .party__image img {
+    margin-bottom: 10px;
+  }
+  .tagline {
+    font-size: 35px;
+    margin-bottom: 150px;
+    font-family: "Slovic";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .tagline__content {
+    text-align: center;
+    padding-inline: 0px;
+  }
+  .tagline__content::first-letter {
+    font-size: 55px;
+  }
+  .footer__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer__contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+  }
+  .footer__contacts-item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+  .footer__contacts-text {
+    font-weight: 700;
+    font-size: 25px;
+  }
+  .footer__contacts-link {
+    font-weight: 900;
+    font-size: 25px;
+    text-align: center;
+  }
+}
+@keyframes header-load {
+  from {
+    transform: translateX(-1500px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+/* 
+
+.header__logo {
+  animation-name: header-load;
+  animation-duration: 0.6s;
+}
+
+@keyframes header-load {
+  from {
+    transform: translateY(-100px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes main-left-load {
+  from {
+    transform: translateX(-700px);
+  }
+
+  to {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes main-right-load {
+  from {
+    transform: translateX(700px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+} */
