@@ -288,7 +288,7 @@ body {
   font-size: 25px;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .header {
     margin-bottom: 110px;
   }
